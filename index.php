@@ -1,28 +1,32 @@
 
 <?php
-	//Agregamos la libreria para genera códigos QR
+	// We add the library to generate qr codes
 	require "phpqrcode/qrlib.php";    
 	
-	//Declaramos una carpeta temporal para guardar la imagenes generadas
+	// We stablish a temporal directory to save images
 	$dir = 'temp/';
 	
-	//Si no existe la carpeta la creamos
+	//If there's no directory, we create it
 	if (!file_exists($dir))
         mkdir($dir);
 	
-        //Declaramos la ruta y nombre del archivo a generar
+    // We declare the path we it will save the qr code
 	$filename = $dir.'test.png';
  
-        //Parametros de Condiguración
+    // Here we stablish the settings
 	
-	$tamaño = 10; //Tamaño de Pixel
-	$level = 'L'; //Precisión Baja
-	$framSize = 3; //Tamaño en blanco
-	$contenido = "http://codigosdeprogramacion.com"; //Texto
+	// Pixel's size
+	$tamaño = 10;
+	// Low Precission 
+	$level = 'L'; 
+	// Size in white
+	$framSize = 3; 
+	// text
+	$contenido = "http://codigosdeprogramacion.com";
 	
-        //Enviamos los parametros a la Función para generar código QR 
+    // we send the parameters to the qr function
 	QRcode::png($contenido, $filename, $level, $tamaño, $framSize); 
 	
-        //Mostramos la imagen generada
+    // we show the generated image
 	echo '<img src="'.$dir.basename($filename).'" /><hr/>';  
 ?>
