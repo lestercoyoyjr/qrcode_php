@@ -16,7 +16,7 @@
     // Here we stablish the settings
 	
 	// Pixel's size
-	$tamaño = 10;
+	$tamanyo = 10;
 	// Low Precission 
 	$level = 'L'; 
 	// Size in white
@@ -25,7 +25,7 @@
 	$contenido = "http://codigosdeprogramacion.com";
 	
     // we send the parameters to the qr function
-	QRcode::png($contenido, $filename, $level, $tamaño, $framSize); 
+	QRcode::png($contenido, $filename, $level, $tamanyo, $framSize); 
 	
     // we show the generated image
 	echo '<img src="'.$dir.basename($filename).'" /><hr/>';  
