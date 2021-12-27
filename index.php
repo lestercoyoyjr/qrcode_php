@@ -17,6 +17,14 @@
 	
 	// Pixel's size
 	$tamanyo = 10;
+
+	// Precisión:
+
+	// L = Baja
+	// M = Mediana
+	// Q = Alta
+	// H= Máxima
+
 	// Low Precission 
 	$level = 'L'; 
 	// Size in white
